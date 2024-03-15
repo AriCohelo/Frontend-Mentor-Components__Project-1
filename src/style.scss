@@ -1,0 +1,108 @@
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+
+body {
+	@include flexCenter();
+	margin: 0;
+	padding: 0;
+	background-color: #f2e5d8;
+	color: #4d0f0f;
+	font-size: 16px;
+	font-family: 'Outfit';
+}
+
+.recipeContainer {
+	width: 60%;
+	background-color: #ffffff;
+	padding: 30px;
+	margin: 50px 0 50px 0;
+	border-radius: 20px;
+}
+
+.overview {
+	img {
+		border-radius: 20px;
+		width: 100%;
+		object-fit: contain;
+	}
+
+	&__title {
+		color: #3c0a0a;
+		font-family: $font-family-title;
+		font-size: 2rem;
+		font-weight: 400;
+		padding: 20px 0 20px 0;
+	}
+
+	&__content {
+		padding-bottom: 20px;
+	}
+}
+
+.preparation {
+	padding: $padding-standard;
+	background-color: #fef7fc;
+
+	&__title {
+		color: #541f34;
+		font-family: $font-family-standard;
+	}
+}
+
+.ingredients {
+	border-bottom: $border-standard;
+	padding: $padding-standard;
+
+	&__title {
+		font-family: $font-family-title;
+		color: $font-color-title;
+		font-size: $font-size-title;
+	}
+}
+
+.instructions {
+	border-bottom: $border-standard;
+	padding: $padding-standard;
+
+	&__title {
+		font-family: $font-family-title;
+		color: $font-color-title;
+		font-size: $font-size-title;
+	}
+}
+
+.nutrition {
+	padding: $padding-standard;
+
+	&__title {
+		font-family: $font-family-title;
+		color: $font-color-title;
+		font-size: $font-size-title;
+	}
+	&__subtitle {
+		padding: $padding-standard;
+	}
+	&__item {
+		display: flex;
+
+		div {
+			padding: 10px;
+			width: 50%;
+			border-bottom: $border-standard;
+		}
+
+		&__val {
+			color: $font-color-title;
+		}
+	}
+}
+
+li::marker {
+	color: $font-color-title;
+}
+
+ul li,
+ol li {
+	padding: 7px;
+}
